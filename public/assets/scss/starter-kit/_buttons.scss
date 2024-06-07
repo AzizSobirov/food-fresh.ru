@@ -1,0 +1,12 @@
+.btn {
+  user-select: none;
+  transition: var(--transition);
+  cursor: pointer;
+  @include flex-row;
+
+  &--primary {
+    &:hover {
+      background: var(--hover-color);
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  transition: var(--transition);
+  z-index: 9;
+
+  &__top {
+    height: 60px;
+    width: 100%;
+    color: #fff;
+    background: var(--primary);
+
+    .container {
+      height: 100%;
+      @include flex-row(flex-start, center, 24px);
+    }
+
+    .menu {
+      @include start(row, 50px);
+    }
+
+    .socials {
+      margin-left: auto;
+      margin-right: 30px;
+      @include start(row, 15px);
+    }
+
+    .pickup {
+      padding: 0 15px;
+      width: 100%;
+      max-width: 545px;
+      height: 100%;
+      background: var(--primary-light);
+      @include start(row, 15px);
+    }
+  }
+
+  &__nav {
+    padding: 25px 0;
+    height: 115px;
+    width: 100%;
+    transition: var(--transition);
+
+    .container {
+      @include between(24px);
+    }
+
+    .menu {
+      @include start(row, 50px);
+      display: none;
+    }
+
+    &-btn {
+      padding: 0 25px;
+      height: 42px;
+      width: 300px;
+      color: #fff;
+      background: var(--primary);
+      border-radius: 25px;
+      cursor: pointer;
+      @include start(row);
+
+      span {
+        margin: 0 auto;
+      }
+    }
+
+    &-search {
+      padding: 4px;
+      width: 370px;
+      height: 45px;
+      border: 1px solid var(--gray);
+      border-radius: 25px;
+      @include between;
+
+      .row {
+        padding: 0 20px;
+        flex-grow: 1;
+        align-items: center;
+        gap: 12px;
+      }
+
+      input {
+        flex-grow: 1;
+        font-size: 15px;
+      }
+
+      button {
+        width: 110px;
+        height: 100%;
+        font-size: 15px;
+        background: var(--gray);
+        border-radius: 25px;
+      }
+    }
+
+    &-contacts {
+      @include start(column);
+
+      .text-sm {
+        color: #585858;
+      }
+    }
+  }
+
+  @include media("sm") {
+    //
+  }
+}
+
+.section {
+  height: 200vh;
+}
+
+// .header-active {
+// }
+
+.header-sticky {
+  transform: translateY(-60px);
+
+  .header__nav {
+    padding: 10px 0;
+
+    &-btn {
+      width: 225px;
+    }
+
+    &-search {
+      display: none;
+    }
+
+    .menu {
+      display: flex;
+    }
+  }
+}

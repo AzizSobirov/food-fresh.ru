@@ -1,0 +1,52 @@
+---
+import { H2 } from "starter-kit";
+
+interface Props {
+  title?: string;
+  btn?: boolean;
+}
+
+const { title = "Lorem ipsum", btn = false } = Astro.props;
+---
+
+<div class="top">
+  <H2>{title}</H2>
+  {
+    btn && (
+      <div class="top__btns">
+        <div class="btn-prev">
+          <svg
+            width="8"
+            height="15"
+            viewBox="0 0 8 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 14L1 7.5L7 1"
+              stroke="#585858"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="btn-next">
+          <svg
+            width="8"
+            height="15"
+            viewBox="0 0 8 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L7 7.5L1 14"
+              stroke="#585858"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    )
+  }
+</div>

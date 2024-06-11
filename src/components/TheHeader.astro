@@ -1,5 +1,6 @@
 ---
 import { Img, WpNav } from "starter-kit";
+import { TheCategories } from "components";
 import { store } from "store";
 ---
 
@@ -94,18 +95,22 @@ import { store } from "store";
       <a href="/"><Img src="logo.svg" /></a>
 
       <div class="header__nav-btn">
-        <svg
-          width="20"
-          height="12"
-          viewBox="0 0 20 12"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M0 1H20" stroke="#fff"></path>
-          <path d="M0 6H11" stroke="#fff"></path>
-          <path d="M0 11H20" stroke="#fff"></path>
-        </svg>
-        <span>Продукция</span>
+        <div class="row">
+          <svg
+            width="20"
+            height="12"
+            viewBox="0 0 20 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 1H20" stroke="#fff"></path>
+            <path d="M0 6H11" stroke="#fff"></path>
+            <path d="M0 11H20" stroke="#fff"></path>
+          </svg>
+          <span>Продукция</span>
+        </div>
+
+        <TheCategories />
       </div>
 
       <form class="header__nav-search">

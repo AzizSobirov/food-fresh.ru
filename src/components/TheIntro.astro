@@ -1,0 +1,48 @@
+---
+import { Section, Img, Icon, Col, Row } from "starter-kit";
+import { TheAside } from "components";
+---
+
+<Section name="intro">
+  <TheAside />
+  <div class="intro__content">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="intro__title">
+            <div class="text-primary">Фуд Фреш –</div>
+            Ваш надежный поставщик продуктов питания
+          </div>
+          <Img src="intro/1.png" class="bg-img" />
+        </div>
+        <div class="swiper-slide">
+          <div class="intro__title">
+            <div class="text-primary">Lorem IPsum –</div>
+            Lorem ipsum dolor sit amet.
+          </div>
+          <Img src="intro/2.png" class="bg-img" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="intro__bottom">
+      <div class="intro__bottom-item">
+        <Icon src="supermarket-gift.svg" />
+        <span>Бонусная система</span>
+      </div>
+      <div class="intro__bottom-item">
+        <Icon src="warranty.svg" />
+        <span> Гарантия свежести</span>
+      </div>
+      <div class="intro__bottom-item">
+        <Icon src="cash.svg" />
+        <span>Лучшие цены </span>
+      </div>
+      <div class="intro__bottom-item">
+        <Icon src="delivery-van.svg" />
+        <span>Быстрая доставка </span>
+      </div>
+    </div>
+  </div>
+</Section>

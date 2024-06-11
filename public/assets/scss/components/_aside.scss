@@ -1,0 +1,32 @@
+.aside {
+  position: sticky;
+  top: 0;
+  width: 300px;
+  z-index: 2;
+  @include start(column, 20px);
+
+  .menu {
+    gap: 25px;
+  }
+
+  &__banner {
+    position: relative;
+    padding: 14px 24px 24px;
+    width: 100%;
+    color: #4b4b4b;
+    background: #f0f0f0;
+    border-radius: 20px;
+    overflow: hidden;
+    @include start(column, 15px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 140px;
+      height: 115px;
+      background: url(../img/korzinka.png) center/cover no-repeat;
+    }
+  }
+}

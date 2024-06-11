@@ -1,11 +1,16 @@
 ---
 import App from "../layouts/App.astro";
-import { Image } from "astro:assets";
 import { Section, H1, H2, Iframe, Block } from "starter-kit";
+import { TheIntro, TheCatalog, TheOffers } from "components";
 ---
 
 <App title="Главная">
   <main>
-    <div class="section"></div>
+    <!-- TheIntro -->
+    <TheIntro />
+    <!-- TheCatalog -->
+    <TheCatalog />
+    <!-- TheOffers -->
+    <TheOffers />
   </main>
 </App>

@@ -48,23 +48,52 @@
       @include between(24px);
     }
 
-    .menu {
+    .container > .menu {
       @include start(row, 50px);
       display: none;
+
+      a {
+        transition: var(--transition);
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
     }
 
     &-btn {
-      padding: 0 25px;
-      height: 42px;
-      width: 300px;
-      color: #fff;
-      background: var(--primary);
-      border-radius: 25px;
-      cursor: pointer;
-      @include start(row);
+      position: relative;
 
-      span {
-        margin: 0 auto;
+      &:hover .categories {
+        display: flex;
+      }
+
+      .row {
+        padding: 0 25px;
+        height: 42px;
+        width: 300px;
+        color: #fff;
+        background: var(--primary);
+        border-radius: 25px;
+        cursor: pointer;
+        align-items: center;
+
+        span {
+          margin: 0 auto;
+        }
+      }
+
+      .categories {
+        position: absolute;
+        top: calc(100% + 20px);
+        display: none;
+
+        @include before {
+          top: -20px;
+          left: 0;
+          width: 100%;
+          height: 20px;
+        }
       }
     }
 
@@ -122,9 +151,11 @@
   transform: translateY(-60px);
 
   .header__nav {
-    padding: 10px 0;
+    padding: 15px 0;
+    height: auto;
+    background: #fff;
 
-    &-btn {
+    &-btn .row {
       width: 225px;
     }
 
@@ -132,7 +163,7 @@
       display: none;
     }
 
-    .menu {
+    .container > .menu {
       display: flex;
     }
   }

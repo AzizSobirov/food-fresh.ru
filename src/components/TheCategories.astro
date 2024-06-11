@@ -1,0 +1,86 @@
+---
+import { WpNav } from "starter-kit";
+
+const list = [
+  {
+    name: "Овощи и фрукты",
+    href: "/catalog",
+    children: [
+      {
+        name: "Овощи",
+        href: "/catalog/ovoshie",
+      },
+      {
+        name: "Фрукты",
+        href: "/catalog/frukty",
+      },
+      {
+        name: "Зелень",
+        href: "/catalog/zelenie",
+      },
+      {
+        name: "Ягоды",
+        href: "/catalog/yagody",
+      },
+    ],
+  },
+  {
+    name: "Бакалея",
+    href: "/catalog",
+    children: [
+      {
+        name: "Овощи 2",
+        href: "/catalog/ovoshie",
+      },
+      {
+        name: "Фрукты 2",
+        href: "/catalog/frukty",
+      },
+      {
+        name: "Зелень 2",
+        href: "/catalog/zelenie",
+      },
+      {
+        name: "Ягоды 2",
+        href: "/catalog/yagody",
+      },
+    ],
+  },
+  {
+    name: "Молочные продукты",
+    href: "/catalog",
+  },
+  {
+    name: "Соленья ",
+    href: "/catalog",
+  },
+  {
+    name: "Грибы ",
+    href: "/catalog",
+  },
+  {
+    name: "Морепродукты ",
+    href: "/catalog",
+  },
+  {
+    name: "Заморозка ",
+    href: "/catalog",
+  },
+  {
+    name: "Мясо и птица ",
+    href: "/catalog",
+  },
+  {
+    name: "Колбасы ",
+    href: "/catalog",
+  },
+  {
+    name: "Яйца ",
+    href: "/catalog",
+  },
+];
+---
+
+<div class="categories">
+  <WpNav list={list} />
+</div>

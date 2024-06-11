@@ -1,0 +1,74 @@
+.intro {
+  padding: 200px 0 35px;
+
+  .container {
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  &__content {
+    width: 1000px;
+    @include start(column, 35px, flex-start);
+  }
+
+  .swiper {
+    position: relative;
+    flex-grow: 1;
+    min-height: 215px;
+    width: 100%;
+    background: #ebfaeb;
+    border-radius: 25px;
+    overflow: hidden;
+    cursor: grab;
+
+    &-slide {
+      position: relative;
+      padding: 35px;
+      height: 100%;
+      z-index: 1;
+      @include start;
+    }
+
+    &-pagination {
+      width: auto;
+      height: auto;
+      left: 35px;
+      bottom: 24px;
+      @include start(row, 7px);
+
+      &-bullet {
+        margin: 0 !important;
+        width: 14px;
+        height: 14px;
+        background: var(--gray);
+        opacity: 1;
+
+        &-active {
+          background: var(--primary);
+        }
+      }
+    }
+  }
+
+  &__title {
+    width: 100%;
+    max-width: 580px;
+    font-size: 40px;
+    font-weight: 700;
+
+    .text-primary {
+      font-size: 64px;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    @include between(20px);
+    --icon-size: 60px;
+
+    &-item {
+      @include start(row, 30px);
+    }
+  }
+}

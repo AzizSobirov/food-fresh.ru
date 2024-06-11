@@ -1,0 +1,76 @@
+.offers {
+  padding: 35px 0;
+
+  .container {
+    @include grid-cols(2, 25px);
+  }
+
+  .text-h2 {
+    font-weight: 300;
+  }
+
+  &__item {
+    position: relative;
+    padding: 45px 38px 60px;
+    width: 100%;
+    height: 385px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+    }
+
+    &:nth-child(1) {
+      background: var(--primary);
+      --btn-bg: var(--primary);
+
+      &::after {
+        bottom: -5px;
+        width: 320px;
+        background: url("/assets/img/offer-1-bg.png") center/contain no-repeat;
+      }
+    }
+
+    &:nth-child(2) {
+      background: var(--cyan);
+      --btn-bg: var(--cyan);
+
+      &::after {
+        bottom: -10px;
+        width: 350px;
+        background: url("/assets/img/offer-2-bg.png") center/contain no-repeat;
+      }
+    }
+
+    .col {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      max-width: 325px;
+      color: #fff;
+      z-index: 2;
+      gap: 22px;
+    }
+
+    a {
+      margin-top: auto;
+      padding: 10px 20px;
+      color: var(--btn-bg);
+      font-weight: 300;
+      background: #fff;
+      border-radius: 15px;
+      transition: var(--transition);
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+
+// @include show(".offers", false);

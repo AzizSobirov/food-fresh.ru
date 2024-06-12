@@ -27,3 +27,20 @@ var catalogSwiper = new Swiper(".catalog .swiper", {
   }
 });
 
+var specialSwiper = new Swiper(".special .swiper", {
+  slidesPerView: 4,
+  spaceBetween: 25,
+  navigation: {
+    nextEl: ".special .btn-next",
+    prevEl: ".special .btn-prev",
+  }
+});
+
+var clientsSwiper = new Swiper(".clients .swiper", {
+  slidesPerView: 8,
+  spaceBetween: 65,
+  navigation: {
+    nextEl: ".clients .btn-next",
+    prevEl: ".clients .btn-prev",
+  }
+});

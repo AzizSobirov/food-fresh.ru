@@ -1,0 +1,18 @@
+---
+import { Section, Img, Icon, Col, Row } from "starter-kit";
+import { TheTop } from "components";
+---
+
+<Section name="sklad">
+  <TheTop title="Наш склад для самовывоза" />
+
+  <div class="sklad__map">
+    <div class="sklad__map-location">
+      <Icon src="location.svg" />
+      <div class="font-light">Россия, Москва, Бережковская набережная, 12А</div>
+    </div>
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?lang=ru_RU&scroll=true&source=constructor-api&um=constructor%3Afe19273bb416c127185b88171dc3845fa278048ca162c0b48a344d1f95f223d5"
+      frameborder="0"></iframe>
+  </div>
+</Section>

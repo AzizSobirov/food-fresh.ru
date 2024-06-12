@@ -1,0 +1,29 @@
+.clients {
+  padding: 35px 0;
+
+  .top {
+    margin-bottom: 38px;
+
+    &__btns {
+      display: none;
+    }
+  }
+
+  &__list {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    width: 110px;
+    height: 110px;
+    @include center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+// @include show(".clients", false);

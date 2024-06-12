@@ -1,3 +1,68 @@
+---
+import { Img, Icon, Col } from "starter-kit";
+---
+
 <footer class="footer">
-  <div class="container"></div>
+  <div class="container">
+    <div class="footer__content">
+      <div class="footer__item">
+        <a href="/"><Img src="logo-dark.svg" only /></a>
+        <div class="font-light">только свежие продукты!</div>
+        <a class="btn" href="#">
+          <Icon src="email-dark.svg" />
+          <div class="font-light">Написать нам</div>
+        </a>
+      </div>
+      <div class="footer__item">
+        <div class="text-xl font-semibold uppercase">КАТАЛОГ</div>
+        <ul class="font-light">
+          <li><a href="#">Овощи и фрукты</a></li>
+          <li><a href="#">Бакалея</a></li>
+          <li><a href="#">Молочные продукты</a></li>
+          <li><a href="#">Соленья</a></li>
+          <li><a href="#">Грибы</a></li>
+          <li><a href="#">Морепродукты</a></li>
+          <li><a href="#">Заморозка</a></li>
+          <li><a href="#">Мясо и птица</a></li>
+          <li><a href="#">Колбасы</a></li>
+          <li><a href="#">Яйца</a></li>
+        </ul>
+      </div>
+      <div class="footer__item">
+        <div class="text-xl font-semibold uppercase">ИНФОРМАЦИЯ</div>
+        <ul class="font-light">
+          <li><a href="#">Цены</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">Вакансии</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer__item">
+        <div class="text-xl font-semibold uppercase">КОНТАКТЫ</div>
+        <Col class="font-light">
+          <a href="tel:+84991100263" class="text-xl text-primary font-regular">
+            +7 (499) 110-02-63
+          </a>
+          <a href="mailto:food-fresh.ru@mail.ru"> food-fresh.ru@mail.ru</a>
+        </Col>
+      </div>
+      <div class="footer__item">
+        <div class="text-xl font-semibold uppercase">НАШ СКЛАД</div>
+        <Col class="font-light">
+          <p>Россия, Москва, Бережковская <br /> набережная, 12А</p>
+          <a class="btn" href="#">
+            <Icon src="location.svg" />
+            <div class="font-light">Показать на карте</div>
+          </a>
+        </Col>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <a href="#" class="row font-light">
+        Разработка и продвижение
+        <Img src="seo-tex.svg" only />
+      </a>
+    </div>
+  </div>
 </footer>

@@ -1,5 +1,51 @@
 .footer {
-  @include media("sm") {
-    //
+  padding: 70px 0 45px;
+  width: 100%;
+  color: #fff;
+  background: #212121;
+
+  &__content {
+    width: 100%;
+    @include flex-row(space-between, flex-start, 24px);
+  }
+
+  &__item {
+    @include start(column, 18px);
+
+    &:nth-child(1) {
+      gap: 0;
+
+      & > .font-light {
+        margin: 10px 0 24px;
+      }
+    }
+
+    &:last-child {
+      .col {
+        gap: 25px;
+      }
+    }
+
+    ul {
+      @include start(column, 20px);
+    }
+
+    .btn {
+      padding: 10px 25px;
+      width: fit-content;
+      border-radius: 15px;
+      border: 1px solid #fff;
+      gap: 10px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 34px;
+    width: 100%;
+
+    .row {
+      align-items: center;
+      gap: 12px;
+    }
   }
 }

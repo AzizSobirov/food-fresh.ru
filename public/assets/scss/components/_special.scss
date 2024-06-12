@@ -1,9 +1,8 @@
-.catalog {
-  position: relative;
+.special {
   padding: 35px 0;
 
   .top {
-    margin-bottom: 22px;
+    margin-bottom: 38px;
   }
 
   &__products {
@@ -20,9 +19,19 @@
     @include flex-col(center, center, 10px);
 
     img {
-      height: 112px;
-      width: 100%;
+      height: 180px;
+      width: 180px;
       object-fit: contain;
+      border-radius: 20px;
+    }
+
+    a {
+      padding: 5px 25px;
+      color: #fff;
+      background: var(--primary);
+      border-radius: 12px;
     }
   }
 }
+
+// @include show(".special", false);

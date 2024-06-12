@@ -1,0 +1,102 @@
+---
+import App from "../layouts/App.astro";
+import { Section, H1, H2, Img, Icon, Block, Col } from "starter-kit";
+import { TheTop, TheOffers, TheClients, TheSklad } from "components";
+
+const reasons = [
+  {
+    title: "Под ключ",
+    desc: "Наша задача - обеспечить продуктами питания под ключ любое заведение или домашнюю кухню",
+    icon: "groceries.svg",
+  },
+  {
+    title: "Логистика",
+    desc: "Наша логистическая система позволяет обеспечить доставку в минимальные сроки",
+    icon: "delivery.svg",
+  },
+
+  {
+    title: "Объемы ",
+    desc: "За предыдущий год наша компания отгрузила клиентам более 50 тонн продуктов.",
+    icon: "delivery-insurance.svg",
+  },
+  {
+    title: "Партнеры",
+    desc: "Нашими поставщиками являются производители более чем из 50 стран ближнего и дальнего зарубежья",
+    icon: "earth-grid.svg",
+  },
+  {
+    title: "Качество ",
+    desc: "Жесткий контроль качества и подбор персонала - ключевые причины роста нашей компании",
+    icon: "groceries.svg",
+  },
+  {
+    title: "Сотрудничество ",
+    desc: "Мы дорожим нашими клиентами, и всегда готовы предложить лучший сервис и условия сотрудничества",
+    icon: "cooperation.svg",
+  },
+];
+---
+
+<App title="О компании">
+  <main>
+    <!-- TheAbout -->
+    <Section name="about">
+      <div class="about__intro">
+        <div class="about__intro-title">
+          <div class="text-primary">Фуд Фреш –</div>
+          Ваш надежный поставщик продуктов питания
+        </div>
+        <Img src="about/banner.png" class="bg-img" />
+      </div>
+      <div class="about__desc text-xl text-primary font-bold">
+        Наша компания занимается доставкой продуктов питания в Москве и
+        Московской области с 2005 года. Почти за 15-летний опыт мы
+        сформулировали свои основные принципы:
+      </div>
+      <ul class="about__list font-light">
+        <li>
+          Мы работаем только с проверенными поставщиками. И гарантируем качество
+          каждого продукта
+        </li>
+        <li>
+          Скорость доставки - один из самых важных моментов в нашей работе,
+          поэтому мы постепенно расширяем свой собственный автопарк, чтобы
+          минимально зависеть от сторонних компаний
+        </li>
+        <li>
+          Никакой просрочки и неликвида - за это отвечает специальный отдел на
+          нашем складе. Только свежая продукция
+        </li>
+        <li>
+          Полное сопровождение продуктов необходимыми документами. Также
+          работаем со ФГИС "Меркурий"
+        </li>
+      </ul>
+    </Section>
+    <!-- TheReasons -->
+    <Section name="reasons">
+      <TheTop title="6 причин работать с нами" />
+
+      <ul class="reasons__list">
+        {
+          reasons.map((reason) => (
+            <li class="reasons__item">
+              <Icon src={reason.icon} />
+              <Col>
+                <div class="text-xl text-primary font-bold">{reason.title}</div>
+                <p class="font-light">{reason.desc}</p>
+              </Col>
+            </li>
+          ))
+        }
+      </ul>
+    </Section>
+    <!-- TheOffers -->
+    <TheOffers />
+    <!-- TheClients -->
+    <TheClients />
+    <!-- TheSklad -->
+    <TheSklad />
+  </main>
+</App>

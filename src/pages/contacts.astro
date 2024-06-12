@@ -1,0 +1,146 @@
+---
+import App from "../layouts/App.astro";
+import { Section, H1, H2, Img, Icon, Block, Col, Row } from "starter-kit";
+import { TheTop, TheSpecial, TheClients, TheSklad } from "components";
+---
+
+<App title="Контакты">
+  <main>
+    <!-- TheContacts -->
+    <Section name="contacts">
+      <TheTop title="Контакты офис и склад" />
+
+      <div class="contacts__content">
+        <Col>
+          <p>
+            <span class="text-primary font-bold">Адрес офиса:</span>
+            121165 Москва, ул. Дунаевского, д.4 <br />
+            <span class="text-primary font-bold">Адрес склада:</span>
+            129052Москва, Бережковская наб., 12а
+          </p>
+
+          <span class="text-primary font-bold">Телефоны головного офиса:</span>
+          <span>
+            <a href="tel:+74991100263" class="text-xl text-primary font-bold">
+              +7 (499) 110-02-63
+            </a>
+            (многоканальный)
+          </span>
+          <span>
+            <a href="tel:89670679905">8(967) 067-99-05</a>
+            <br />
+            <a href="tel:89057427007">8(905) 742-70-07</a> Каролина
+          </span>
+          <p>Заявки принимаются ежедневно с 10-00 до 22-00.</p>
+          <p>
+            По договоренности возможна бесплатная доставка в пределах Москвы и
+            Московской области.
+            <span class="text-primary font-bold">
+              Подробнее об условиях доставки.
+            </span>
+          </p>
+          <span class="text-primary font-bold">Мессенджеры:</span>
+          <Row>
+            <a href="#">
+              <Icon src="whatsapp.svg" />
+            </a>
+            <a href="#">
+              <Icon src="telegram.svg" />
+            </a>
+            <a href="#">
+              <Icon src="viber.svg" />
+            </a>
+          </Row>
+        </Col>
+        <Img src="about/contacts.png" class="contacts__img" only />
+      </div>
+    </Section>
+    <!-- TheDeliveryContacts -->
+    <Section name="contacts-delivery">
+      <TheTop title="Контакты отдела доставки" />
+      <div class="contacts-delivery__content">
+        <p>
+          Все вопросы, возникающие в процессе доставки продуктов в рестораны,
+          продуктов в кафе и другие предприятия общественного питания,
+          оперативно решаются с нашей службой доставки по телефону:
+        </p>
+        <span>
+          <a href="tel:+74991100263" class="text-xl text-primary font-bold">
+            +7 (499) 110-02-63
+          </a>
+          (многоканальный)
+        </span>
+        <p>
+          Если Вам не удалось найти на нашем сайте необходимый товар, Вы также
+          можете обратиться за оперативной информацией о наличии товаров в нашу
+          службу сбыта по телефону:
+          <br /><br />
+          <span>
+            <a href="tel:89670679905 ">8 (967) 067-99-05 </a> Елена
+          </span>
+        </p>
+      </div>
+    </Section>
+    <!-- TheDeliveryContacts -->
+    <Section name="contacts-delivery">
+      <TheTop title="Контакты отдела доставки" />
+      <div class="contacts-delivery__content">
+        <p>
+          По спорным вопросам, а также при решении вопросов, касающихся
+          индивидуальной схемы доставки и оплаты товара, обращайтесь к
+          управляющему компании "Фуд Фреш" по прямому телефону:
+          <br /><br />
+          <span>
+            <a href="tel:89670679905 ">8 (967) 067-99-05 </a> Елена
+          </span>
+        </p>
+      </div>
+    </Section>
+    <!-- TheDeliveryContacts -->
+    <Section name="contacts-delivery">
+      <TheTop title="Контакты отдела доставки" />
+      <div class="contacts-delivery__content">
+        <ul class="list">
+          <li>
+            Офис: <a
+              class="text-primary font-bold"
+              href="mailto:food-fresh.ru@mail.ru">food-fresh.ru@mail.ru</a
+            >
+          </li>
+          <li>
+            Отдел закупок: <a
+              class="text-primary font-bold"
+              href="mailto:zakupki@food-fresh.ru">zakupki@food-fresh.ru</a
+            >
+          </li>
+          <li>
+            Отдел продаж: <a
+              class="text-primary font-bold"
+              href="mailto:sale@food-fresh.ru">sale@food-fresh.ru</a
+            >
+          </li>
+          <li>
+            Бухгалтерия: <a
+              class="text-primary font-bold"
+              href="mailto:buh@food-fresh.ru">buh@food-fresh.ru</a
+            >
+          </li>
+          <li>
+            Директор: <a
+              class="text-primary font-bold"
+              href="mailto:direktor@food-fresh.ru">direktor@food-fresh.ru</a
+            >
+          </li>
+          <li>
+            Вопросы и пожелания: <a
+              class="text-primary font-bold"
+              href="mailto:vopros@food-fresh.ru">vopros@food-fresh.ru</a
+            >
+          </li>
+        </ul>
+      </div>
+    </Section>
+  </main>
+  <!-- TheSklad -->
+  <TheSklad />
+</App>

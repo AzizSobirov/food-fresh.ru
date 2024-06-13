@@ -128,7 +128,7 @@
 // ** Catalog Aside ** //
 .aside {
   position: sticky;
-  top: 0;
+  top: 100px;
   width: 300px;
   z-index: 2;
   @include start(column, 20px);

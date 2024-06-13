@@ -1,3 +1,223 @@
-<div>
-  hi
-</div>
+---
+import App from "../../layouts/App.astro";
+import { Section, H1, H2, Img, Icon, Block, Col, Row } from "starter-kit";
+import { TheAside, TheTop, TheOffers, TheClients, TheSklad } from "components";
+---
+
+<App title="Категория 1">
+  <main>
+    <!-- TheCategory -->
+    <Section name="category">
+      <Fragment slot="header">
+        <div class="category__top">
+          <Img class="bg-img" src="catalog/bg.png" />
+          <div class="container">
+            <div class="breadcrumb">
+              <a href="/">Главная</a>
+              <span>/</span>
+              <a href="/catalog">Каталог</a>
+              <span>/</span>
+              <a href="#">Овощи и фрукты</a>
+              <span>/</span>
+              <a href="#" class="font-light">Овощи </a>
+            </div>
+            <H2>Овощи </H2>
+          </div>
+        </div>
+      </Fragment>
+
+      <div class="category__wrapper">
+        <TheAside />
+
+        <div class="category__products">
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/potato.png" only />
+            <span>Картофель</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/carrot.png" only />
+            <span>Морковь</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/onion.png" only />
+            <span>Лук</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/cabbage.png" only />
+            <span>Капуста</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/potato.png" only />
+            <span>Картофель</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/carrot.png" only />
+            <span>Морковь</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/onion.png" only />
+            <span>Лук</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/cabbage.png" only />
+            <span>Капуста</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/potato.png" only />
+            <span>Картофель</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/carrot.png" only />
+            <span>Морковь</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/onion.png" only />
+            <span>Лук</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/cabbage.png" only />
+            <span>Капуста</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/potato.png" only />
+            <span>Картофель</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/carrot.png" only />
+            <span>Морковь</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/onion.png" only />
+            <span>Лук</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/cabbage.png" only />
+            <span>Капуста</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/potato.png" only />
+            <span>Картофель</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/carrot.png" only />
+            <span>Морковь</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/onion.png" only />
+            <span>Лук</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+          <div class="category__products-product">
+            <div class="text-xs">В наличии</div>
+            <Img src="products/cabbage.png" only />
+            <span>Капуста</span>
+            <div>
+              <span class="text-primary font-bold">Упаковка :</span> 1кг
+            </div>
+            <a href="#">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </Section>
+    <!-- TheOffers -->
+    <TheOffers />
+    <!-- TheClients -->
+    <TheClients />
+    <!-- TheSklad -->
+    <TheSklad />
+  </main>
+</App>

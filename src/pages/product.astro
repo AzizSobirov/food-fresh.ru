@@ -1,0 +1,179 @@
+---
+import App from "../layouts/App.astro";
+import { Section, H1, H2, Img, Icon, Col, Row } from "starter-kit";
+import { TheAside, TheTop, TheOffers, TheClients, TheSklad } from "components";
+---
+
+<App title="Категория 1">
+  <main>
+    <!-- TheCategory -->
+    <Section name="category">
+      <Fragment slot="header">
+        <div class="category__top">
+          <div class="bg-img"></div>
+          <div class="container">
+            <div class="breadcrumb">
+              <a href="/">Главная</a>
+              <span>/</span>
+              <a href="/catalog">Каталог</a>
+              <span>/</span>
+              <a href="#">Овощи и фрукты</a>
+              <span>/</span>
+              <a href="#">Овощи </a>
+              <span>/</span>
+              <a href="#" class="font-light">Картофель</a>
+            </div>
+          </div>
+        </div>
+      </Fragment>
+
+      <div class="category__wrapper">
+        <TheAside />
+
+        <div class="category__content">
+          <div class="category__product">
+            <Row>
+              <Img src="products/potato-large.png" only />
+              <Col>
+                <H2>Картофель</H2>
+                <div class="text-xl text-primary font-bold">
+                  Цена по запросу
+                </div>
+                <p>
+                  Картофель – клубненосное многолетнее растение. Интересно, что
+                  он известен в качестве овощной культуры больше 12000 лет. За
+                  это время он получил широкое распространение, без
+                  приготовления сытных блюд из вкусных клубней не обходится ни
+                  одна кухня мира. Сегодня купить свежий картофель стремятся все
+                  заведения общепита, так как он не только полезен, но
+                  используется для приготовления большого количества популярных
+                  у посетителей блюд. Мы также предлагаем своим клиента купить
+                  красный картофель - другую разновидность картофеля.
+                </p>
+              </Col>
+            </Row>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Наименование</th>
+                  <th>Упаковка</th>
+                  <th>Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Картофель красный</td>
+                  <td>сетка 30-40кг</td>
+                  <td>
+                    <div class="btn">Запросить цену</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Молодой картофель</td>
+                  <td>сетка 30-40кг</td>
+                  <td>
+                    <div class="btn">Запросить цену</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Мытый картофель </td>
+                  <td>сетка 30-40кг</td>
+                  <td>
+                    <div class="btn">Запросить цену</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="category__leaders">
+            <TheTop title="Персональные рекомендации" btn={true} />
+
+            <div class="category__leaders-list swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide category__leaders-item">
+                  <Img src="products/carrot.png" only />
+                  <span>Говядина лопаточный отруб</span>
+                  <div class="text-primary font-bold">от 357,80 руб/кг</div>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="swiper-slide category__leaders-item">
+                  <Img src="products/carrot.png" only />
+                  <span>Говядина лопаточный отруб</span>
+                  <div class="text-primary font-bold">от 357,80 руб/кг</div>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="swiper-slide category__leaders-item">
+                  <Img src="products/carrot.png" only />
+                  <span>Говядина лопаточный отруб</span>
+                  <div class="text-primary font-bold">от 357,80 руб/кг</div>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="swiper-slide category__leaders-item">
+                  <Img src="products/carrot.png" only />
+                  <span>Говядина лопаточный отруб</span>
+                  <div class="text-primary font-bold">от 357,80 руб/кг</div>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="swiper-slide category__leaders-item">
+                  <Img src="products/carrot.png" only />
+                  <span>Говядина лопаточный отруб</span>
+                  <div class="text-primary font-bold">от 357,80 руб/кг</div>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="swiper-slide category__leaders-item">
+                  <Img src="products/carrot.png" only />
+                  <span>Говядина лопаточный отруб</span>
+                  <div class="text-primary font-bold">от 357,80 руб/кг</div>
+                  <a href="#">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Section>
+    <!-- TheOffers -->
+    <TheOffers />
+    <!-- TheBuy -->
+    <Section name="buy">
+      <H2>Картофель купить в Москве с доставкой</H2>
+      <div class="buy__dropdown">
+        <div class="buy__dropdown-content">
+          <p class="font-light">
+            Сегодня это самый ценный продукт мира. Он растет во всех странах
+            умеренного климатического пояса. Самые большие его плантации
+            расположены в Китае. В составе клубней находится большинство
+            полезных аминокислот, фосфор, углеводы, витамин С, калий, клетчатка.
+            Особое внимание нужно уделить картофельному крахмалу,
+            способствующему понижению уровня холестерина. А наличие калия
+            помогает вывести лишнюю воду из организма. <br />
+            Калорийность такого продукта составляет 76 ккал на 100 граммов. Потому
+            продукт часто включают в меню разгрузочных дней, диет. Картофельная диета
+            – это эффективный способ похудения или поддержания веса в норме.
+
+            <br /><br />
+
+            Сегодня это самый ценный продукт мира. Он растет во всех странах
+            умеренного климатического пояса. Самые большие его плантации
+            расположены в Китае. В составе клубней находится большинство
+            полезных аминокислот, фосфор, углеводы, витамин С, калий, клетчатка.
+            Особое внимание нужно уделить картофельному крахмалу,
+            способствующему понижению уровня холестерина. А наличие калия
+            помогает вывести лишнюю воду из организма. <br />
+            Калорийность такого продукта составляет 76 ккал на 100 граммов. Потому
+            продукт часто включают в меню разгрузочных дней, диет. Картофельная диета
+            – это эффективный способ похудения или поддержания веса в норме.
+          </p>
+        </div>
+      </div>
+
+      <div class="btn">Подробнее</div>
+    </Section>
+    <!-- TheClients -->
+    <TheClients />
+    <!-- TheSklad -->
+    <TheSklad />
+  </main>
+</App>

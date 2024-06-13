@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { class: classname, src, alt = "", only = false, ...rest } = Astro.props;
-const url = `assets/img/${src}`;
+const url = `/assets/img/${src}`;
 ---
 
 {

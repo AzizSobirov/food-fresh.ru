@@ -1,0 +1,104 @@
+---
+import App from "../../layouts/App.astro";
+import { Section, H1, H2, Img, Icon, Block, Col, Row } from "starter-kit";
+import { TheAside, TheTop, TheOffers, TheClients, TheSklad } from "components";
+---
+
+<App title="Категория 1">
+  <main>
+    <!-- TheCategory -->
+    <Section name="category">
+      <Fragment slot="header">
+        <div class="category__top">
+          <Img class="bg-img" src="catalog/bg.png" />
+          <div class="container">
+            <div class="breadcrumb">
+              <a href="/">Главная</a>
+              <span>/</span>
+              <a href="/catalog">Каталог</a>
+              <span>/</span>
+              <a href="#" class="font-light">Овощи и фрукты</a>
+            </div>
+            <H2>Овощи и фрукты</H2>
+          </div>
+        </div>
+      </Fragment>
+
+      <div class="category__wrapper">
+        <TheAside />
+
+        <div class="category__content">
+          <div class="category__list">
+            <a href="#" class="category__list-item">
+              <Img src="catalog/fruits.png" only />
+              <span>Овощи и фрукты</span>
+            </a>
+            <a href="#" class="category__list-item">
+              <Img src="catalog/bakeleya.png" only />
+              <span>Бакалея</span>
+            </a>
+            <a href="#" class="category__list-item">
+              <Img src="catalog/milk.png" only />
+              <span>Молочные продукты</span>
+            </a>
+            <a href="#" class="category__list-item">
+              <Img src="catalog/soleniya.png" only />
+              <span>Соленья</span>
+            </a>
+          </div>
+
+          <div class="category__leaders">
+            <TheTop title="Лидеры продаж" btn={true} />
+
+            <div class="category__leaders-list swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide category__leaders-item">
+                  <Img src="products/carrot.png" only />
+                  <span>Говядина лопаточный отруб</span>
+                  <div class="text-primary font-bold">от 357,80 руб/кг</div>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="swiper-slide category__leaders-item">
+                  <Img src="products/carrot.png" only />
+                  <span>Говядина лопаточный отруб</span>
+                  <div class="text-primary font-bold">от 357,80 руб/кг</div>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="swiper-slide category__leaders-item">
+                  <Img src="products/carrot.png" only />
+                  <span>Говядина лопаточный отруб</span>
+                  <div class="text-primary font-bold">от 357,80 руб/кг</div>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="swiper-slide category__leaders-item">
+                  <Img src="products/carrot.png" only />
+                  <span>Говядина лопаточный отруб</span>
+                  <div class="text-primary font-bold">от 357,80 руб/кг</div>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="swiper-slide category__leaders-item">
+                  <Img src="products/carrot.png" only />
+                  <span>Говядина лопаточный отруб</span>
+                  <div class="text-primary font-bold">от 357,80 руб/кг</div>
+                  <a href="#">Подробнее</a>
+                </div>
+                <div class="swiper-slide category__leaders-item">
+                  <Img src="products/carrot.png" only />
+                  <span>Говядина лопаточный отруб</span>
+                  <div class="text-primary font-bold">от 357,80 руб/кг</div>
+                  <a href="#">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Section>
+    <!-- TheOffers -->
+    <TheOffers />
+    <!-- TheClients -->
+    <TheClients />
+    <!-- TheSklad -->
+    <TheSklad />
+  </main>
+</App>

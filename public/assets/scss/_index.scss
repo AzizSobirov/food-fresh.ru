@@ -150,8 +150,10 @@
     }
 
     &__bottom {
+      gap: 20px;
+
       &-item {
-        flex-basis: 180px;
+        flex-basis: 160px;
         gap: 15px;
         --icon-size: 30px;
       }
@@ -178,12 +180,14 @@
   }
 
   &__products {
+    height: 185px;
     width: 100%;
     @include between(25px);
   }
 
   &__product {
     padding: 20px 15px;
+    height: 100%;
     flex-grow: 1;
     background: #f9f9f9;
     border-radius: 20px;
@@ -194,6 +198,29 @@
       height: 112px;
       width: 100%;
       object-fit: contain;
+    }
+  }
+
+  @include media("sm") {
+    padding: 20px 0;
+    overflow: hidden;
+
+    &__products {
+      height: 140px;
+      overflow: visible;
+    }
+
+    &__product {
+      width: 125px;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+
+      span {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -232,6 +259,7 @@
 
       &::after {
         bottom: -5px;
+        right: -20px;
         width: 320px;
         background: url("/assets/img/offer-1-bg.png") center/contain no-repeat;
       }
@@ -272,6 +300,68 @@
       }
     }
   }
+
+  @include media("1380px") {
+    &__item {
+      padding: 20px;
+      height: auto;
+
+      &:nth-child(1) {
+        &::after {
+          bottom: auto;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 200px;
+        }
+      }
+      &:nth-child(2) {
+        &::after {
+          width: 200px;
+        }
+      }
+
+      .text-h2 {
+        font-size: 20px;
+      }
+
+      .col {
+        max-width: 60%;
+      }
+    }
+  }
+  @include media("lg") {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+  @include media("sm") {
+    padding: 20px 0;
+
+    &__item {
+      padding: 24px 15px;
+
+      &:nth-child(1)::after {
+        right: 10px;
+        width: 140px;
+      }
+      &:nth-child(2)::after {
+        transform: translateX(15%);
+      }
+
+      .col {
+        max-width: 65%;
+      }
+
+      .font-light {
+        font-size: 14px;
+      }
+
+      a {
+        font-size: 14px;
+        white-space: nowrap;
+      }
+    }
+  }
 }
 
 // ** Special ** //
@@ -307,6 +397,18 @@
       color: #fff;
       background: var(--primary);
       border-radius: 12px;
+    }
+  }
+
+  @include media("sm") {
+    padding: 20px 0;
+
+    .top {
+      margin-bottom: 24px;
+    }
+
+    &__product {
+      width: 125px;
     }
   }
 }

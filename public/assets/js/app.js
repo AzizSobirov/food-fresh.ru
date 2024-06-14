@@ -41,20 +41,45 @@ var introSwiper = new Swiper(".intro .swiper", {
 });
 
 var catalogSwiper = new Swiper(".catalog .swiper", {
-  slidesPerView: 6,
-  spaceBetween: 25,
+  slidesPerView: "auto",
+  spaceBetween: 10,
   navigation: {
     nextEl: ".catalog .btn-next",
     prevEl: ".catalog .btn-prev",
   }
+  ,
+  breakpoints: {
+    475: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    },
+    1280: {
+      slidesPerView: 6,
+      spaceBetween: 25
+    }
+  }
 });
 
 var specialSwiper = new Swiper(".special .swiper", {
-  slidesPerView: 4,
-  spaceBetween: 25,
+  slidesPerView: 'auto',
+  spaceBetween: 15,
   navigation: {
     nextEl: ".special .btn-next",
     prevEl: ".special .btn-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1025: {
+      slidesPerView: 4,
+      spaceBetween: 25,
+    }
   }
 });
 

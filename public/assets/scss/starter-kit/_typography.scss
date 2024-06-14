@@ -92,31 +92,15 @@
   font-size: 24px;
   font-weight: 700;
 }
-// .text-h4 {
-//   color: var(--primary);
-//   font-size: 20px;
-//   font-weight: 700;
-// }
-// .text-h5 {
-//   font-size: 20px;
-// }
 
-@include media("lg") {
-  .text-h1 {
-    font-size: 32px;
+@include media("md") {
+  .text-h2 {
+    font-size: 24px;
   }
 }
 
 @include media("sm") {
-  .text-h1 {
-    font-size: 24px;
-  }
   .text-h2 {
-    font-size: 20px;
-  }
-}
-@include media("xs") {
-  .text-h1 {
     font-size: 20px;
   }
 }

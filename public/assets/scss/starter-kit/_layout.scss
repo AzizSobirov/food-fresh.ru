@@ -1,8 +1,9 @@
 // ** container ** //
 .container {
+  padding: 0 16px;
   margin: 0 auto;
   width: 100%;
-  max-width: 1340px;
+  max-width: 1372px;
 }
 
 .col {
@@ -38,7 +39,6 @@
 }
 @include media("xl") {
   .container {
-    padding: 0 20px;
     max-width: 1024px;
   }
 }
@@ -54,7 +54,6 @@
 }
 @include media("sm") {
   .container {
-    padding: 0 16px;
     max-width: 475px;
   }
 }

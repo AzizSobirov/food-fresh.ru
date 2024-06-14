@@ -48,4 +48,47 @@
       gap: 12px;
     }
   }
+
+  @include media("xl") {
+    padding-bottom: 110px;
+
+    &__content {
+      flex-wrap: wrap;
+      gap: 60px 40px;
+    }
+
+    &__item {
+      flex-basis: 240px;
+    }
+  }
+  @include media("lg") {
+    &__item {
+      flex-grow: 1;
+      flex-basis: 220px;
+
+      &:nth-child(1) {
+        flex-basis: 100%;
+      }
+    }
+  }
+  @include media("sm") {
+    padding-top: 30px;
+
+    &__content {
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    &__item {
+      flex-basis: auto;
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+
+    &__bottom .row {
+      justify-content: center;
+    }
+  }
 }

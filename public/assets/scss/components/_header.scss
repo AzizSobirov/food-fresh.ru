@@ -61,6 +61,15 @@
       }
     }
 
+    &-logo {
+      height: 35px;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
     &-btn {
       position: relative;
 
@@ -135,13 +144,145 @@
     }
   }
 
+  @include media("1380px") {
+    &__top {
+      .socials {
+        display: none;
+      }
+
+      .pickup {
+        margin-left: auto;
+      }
+    }
+
+    &__nav {
+      .container {
+        gap: 24px;
+      }
+
+      &-btn .row {
+        width: 240px;
+      }
+
+      &-search {
+        width: 320px;
+      }
+    }
+  }
+  @include media("xl") {
+    position: absolute;
+    &__top {
+      .menu {
+        display: none;
+      }
+
+      .pickup {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    &__nav {
+      padding: 15px 0;
+      height: auto;
+
+      &-btn {
+        display: none;
+      }
+      &-search {
+        display: none;
+      }
+    }
+  }
   @include media("sm") {
-    //
+    &__top {
+      padding: 14px 0;
+      height: auto;
+      background: var(--primary-light);
+
+      .pickup {
+        padding: 0;
+      }
+    }
+
+    &__nav {
+      padding: 24px 0 !important;
+
+      .container {
+        justify-content: center;
+      }
+
+      &-logo {
+        height: 32px;
+      }
+
+      &-contacts {
+        display: none !important;
+      }
+    }
   }
 }
 
-.section {
-  height: 200vh;
+.mobile__tabs {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 65px;
+  width: 100%;
+  box-shadow: 0 -4px 29px 0 rgba(0, 0, 0, 0.15);
+  background: #fff;
+  z-index: 10;
+  display: none;
+
+  .container {
+    @include between(15px);
+  }
+
+  &-tab {
+    @include flex-col(center, center, 4px);
+    cursor: pointer;
+    --icon-size: 32px;
+
+    &:last-child {
+      position: relative;
+      width: 80px;
+      height: 100px;
+      color: #fff;
+      background: var(--primary);
+      border-radius: 16px 16px 0 0;
+      transform: translateY(-10px);
+      --icon-size: 24px;
+    }
+  }
+
+  @include media("xl") {
+    @include flex-row;
+  }
+  @include media("380px") {
+    &-tab {
+      gap: 2px;
+      --icon-size: 28px;
+
+      &:last-child {
+        width: 80px;
+        height: 85px;
+      }
+    }
+  }
+  @include media("xxs") {
+    &-tab {
+      gap: 2px;
+      --icon-size: 24px;
+
+      &:last-child {
+        width: 80px;
+        height: 85px;
+      }
+
+      .text-xs {
+        font-size: 11px;
+      }
+    }
+  }
 }
 
 // .header-active {
@@ -164,6 +305,22 @@
     }
 
     .container > .menu {
+      display: flex;
+    }
+  }
+
+  @include media("1380px") {
+    .header__nav-contacts {
+      display: none;
+    }
+  }
+  @include media("xl") {
+    transform: translateY(0);
+
+    .header__nav .menu {
+      display: none !important;
+    }
+    .header__nav-contacts {
       display: flex;
     }
   }

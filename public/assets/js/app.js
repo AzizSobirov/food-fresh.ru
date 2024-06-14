@@ -4,8 +4,7 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("header-sticky", window.scrollY > 0);
 });
 
-
-//** buy moscow **/
+// TODO: Buy from Moscow
 let buy = document.querySelector(".buy");
 if (buy) {
   const dropwown = buy.querySelector(".buy__dropdown");
@@ -26,7 +25,6 @@ if (buy) {
     }
   });
 }
-
 
 // TODO: Swipers
 var introSwiper = new Swiper(".intro .swiper", {
@@ -77,6 +75,3 @@ var categoryLeaders = new Swiper(".category__leaders .swiper", {
     prevEl: ".category__leaders .btn-prev",
   }
 });
-
-
-

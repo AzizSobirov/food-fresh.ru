@@ -9,7 +9,7 @@
   }
 
   &__content {
-    width: 1000px;
+    width: calc(100% - 300px - 40px);
     @include start(column, 35px, flex-start);
   }
 
@@ -66,10 +66,104 @@
   &__bottom {
     width: 100%;
     @include between(20px);
-    --icon-size: 60px;
 
     &-item {
       @include start(row, 30px);
+      --icon-size: 60px;
+    }
+  }
+
+  @include media("1380px") {
+    .swiper {
+      flex-grow: 0;
+      height: 540px;
+    }
+
+    &__title {
+      font-size: 32px;
+      max-width: 80%;
+
+      .text-primary {
+        font-size: 48px;
+      }
+    }
+
+    &__bottom {
+      flex-wrap: wrap;
+
+      &-item {
+        flex: 1 0 280px;
+      }
+    }
+  }
+  @include media("xl") {
+    padding-top: 160px;
+
+    .container {
+      gap: 24px;
+    }
+
+    &__content {
+      width: calc(100% - 300px - 24px);
+    }
+  }
+  @include media("lg") {
+    .aside {
+      display: none;
+    }
+
+    &__content {
+      width: 100%;
+    }
+  }
+  @include media("sm") {
+    padding-bottom: 20px;
+
+    .swiper {
+      height: 240px;
+
+      &-slide {
+        padding: 10px 20px;
+      }
+
+      &-pagination {
+        bottom: 10px;
+        left: 20px;
+
+        &-bullet {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 14px;
+
+      .text-primary {
+        font-size: 20px;
+      }
+    }
+
+    &__content {
+      gap: 24px;
+    }
+
+    &__bottom {
+      &-item {
+        flex-basis: 180px;
+        gap: 15px;
+        --icon-size: 30px;
+      }
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  @include media("xs") {
+    .swiper {
+      height: 220px;
     }
   }
 }

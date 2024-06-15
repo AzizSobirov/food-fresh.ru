@@ -1,12 +1,7 @@
 .btn {
   user-select: none;
+  font-size: 16px;
   transition: var(--transition);
   cursor: pointer;
   @include flex-row;
-
-  &--primary {
-    &:hover {
-      background: var(--hover-color);
-    }
-  }
 }

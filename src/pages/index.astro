@@ -67,7 +67,7 @@ import {
     <!-- TheFoodFresh -->
     <Section name="food-fresh">
       <Col>
-        <div class="title">Фуд Фреш – это</div>
+        <div class="food-fresh__title">Фуд Фреш – это</div>
         <p class="text-xl font-light">
           Полный ассортимент продовольственной и товарной продукции в секторе
           <span class="font-bold text-primary">HoReCa</span>
@@ -80,9 +80,9 @@ import {
           <span class="font-bold text-primary">минимальные цены</span>, мелкие
           партии, собственная служба доставки
         </p>
-        <a href="#">Подробнее о компании</a>
+        <a class="btn" href="/about">Подробнее о компании</a>
       </Col>
-      <div class="img">
+      <div class="food-fresh__img">
         <Img src="about/bg.png" class="bg-img" />
         <Img src="about/chef.png" class="chef" />
       </div>
@@ -93,8 +93,12 @@ import {
     <Section name="price-list">
       <div class="content">
         <H2>Получите наш оптовый прайс лист</H2>
-        <p class="font-light">Пришлем его Вам на почту за 10 минут</p>
-        <a href="#">Запросить прайс лист</a>
+        <p class="font-light">
+          Пришлем его Вам на почту <br class="sm:hidden" /> за 10 минут
+        </p>
+        <button class="btn" onclick="openPopup('form')">
+          Запросить прайс лист
+        </button>
       </div>
     </Section>
     <!-- TheClients -->

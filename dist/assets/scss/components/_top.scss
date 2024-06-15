@@ -1,0 +1,56 @@
+.top {
+  position: relative;
+  padding-bottom: 12px;
+  @include between(20px);
+  border-bottom: 2px solid #e0e0e0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 85px;
+    height: 2px;
+    background: var(--primary);
+  }
+
+  &__btns {
+    @include flex-row(center, center, 20px);
+
+    & > div {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--primary);
+      @include center;
+      cursor: pointer;
+
+      svg path {
+        stroke: #fff;
+      }
+
+      &.swiper-button-disabled {
+        background: #e0e0e0;
+
+        svg path {
+          stroke: #585858;
+        }
+      }
+    }
+
+    @include media("sm") {
+      gap: 15px;
+
+      & > div {
+        min-width: 25px;
+        width: 25px;
+        height: 25px;
+
+        svg {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}

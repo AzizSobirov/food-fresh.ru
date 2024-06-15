@@ -1,0 +1,23 @@
+@import "base/mixins";
+@include font-face("Open Sans", "OpenSans-Light.ttf", "truetype", 300);
+@include font-face("Open Sans", "OpenSans-Regular.ttf", "truetype", 400);
+@include font-face("Open Sans", "OpenSans-Medium.ttf", "truetype", 500);
+@include font-face("Open Sans", "OpenSans-SemiBold.ttf", "truetype", 600);
+@include font-face("Open Sans", "OpenSans-Bold.ttf", "truetype", 700);
+
+:root {
+  --font-primary: "Open Sans", sans-serif;
+  --text-color: #3a3a3a;
+  --primary: #4eac4c;
+  --primary-light: #33d22f;
+  --cyan: #4caca6;
+  --orange: #f9a04e;
+  --brown: #cd6022;
+  --gray: #d9d9d9;
+  --transition: all 0.3s ease-in-out;
+}
+
+@import "base/normalize";
+@import "starter-kit/index";
+@import "components/index";
+@import "index";

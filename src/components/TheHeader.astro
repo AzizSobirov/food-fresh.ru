@@ -2,6 +2,85 @@
 import { Img, WpNav } from "starter-kit";
 import { TheCategories } from "components";
 import { store } from "store";
+
+const list = [
+  {
+    name: "Овощи и фрукты",
+    href: "/catalog",
+    children: [
+      {
+        name: "Овощи",
+        href: "/catalog/inside",
+      },
+      {
+        name: "Фрукты",
+        href: "/catalog/inside",
+      },
+      {
+        name: "Зелень",
+        href: "/catalog/inside",
+      },
+      {
+        name: "Ягоды",
+        href: "/catalog/inside",
+      },
+    ],
+  },
+  {
+    name: "Бакалея",
+    href: "/catalog",
+    children: [
+      {
+        name: "Овощи 2",
+        href: "/catalog/inside",
+      },
+      {
+        name: "Фрукты 2",
+        href: "/catalog/inside",
+      },
+      {
+        name: "Зелень 2",
+        href: "/catalog/inside",
+      },
+      {
+        name: "Ягоды 2",
+        href: "/catalog/inside",
+      },
+    ],
+  },
+  {
+    name: "Молочные продукты",
+    href: "/catalog",
+  },
+  {
+    name: "Соленья ",
+    href: "/catalog",
+  },
+  {
+    name: "Грибы ",
+    href: "/catalog",
+  },
+  {
+    name: "Морепродукты ",
+    href: "/catalog",
+  },
+  {
+    name: "Заморозка ",
+    href: "/catalog",
+  },
+  {
+    name: "Мясо и птица ",
+    href: "/catalog",
+  },
+  {
+    name: "Колбасы ",
+    href: "/catalog",
+  },
+  {
+    name: "Яйца ",
+    href: "/catalog",
+  },
+];
 ---
 
 <header class="header">
@@ -228,7 +307,7 @@ import { store } from "store";
       </div>
       <div class="text-xs">Доставка</div>
     </a>
-    <div class="mobile__tabs-tab">
+    <div class="mobile__tabs-tab" onclick="toggleCategories()">
       <div class="icon">
         <svg
           width="25"
@@ -267,5 +346,24 @@ import { store } from "store";
       </div>
       <div class="text-xs">Продукция</div>
     </div>
+  </div>
+</div>
+
+<div class="mobile__categories">
+  <div class="mobile__categories-content">
+    <svg
+      class="mobile__categories-close"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      onclick="toggleCategories()"
+    >
+      <path d="M1 1L19 19" stroke="white"></path>
+      <path d="M19 1L1 19" stroke="white"></path>
+    </svg>
+
+    <WpNav list={list} />
   </div>
 </div>

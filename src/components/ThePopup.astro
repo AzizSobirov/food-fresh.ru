@@ -1,29 +1,47 @@
 ---
-import { H2 } from "starter-kit";
+import { H2, Img } from "starter-kit";
 ---
 
-<div class="popup popup--form">
-  <div class="popup__bg" onclick="closePopup('form')"></div>
+<div class="popup">
+  <div class="popup__close" onclick="closePopup()">
+    <svg
+      width="25"
+      height="25"
+      viewBox="0 0 25 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M1 1L23.5 23.5" stroke="currentColor" stroke-width="2"></path>
+      <path d="M23.5 1L1 23.5" stroke="currentColor" stroke-width="2"></path>
+    </svg>
+  </div>
+
   <div class="popup__content">
-    <div class="popup__close" onclick="closePopup('form')">
-      <svg
-        width="25"
-        height="25"
-        viewBox="0 0 25 25"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M1 1L23.5 23.5" stroke="currentColor" stroke-width="2"></path>
-        <path d="M23.5 1L1 23.5" stroke="currentColor" stroke-width="2"></path>
-      </svg>
-    </div>
-    <div class="popup__form" id="form-content">
-      <H2>Оставьте заявку</H2>
-      <div class="text-sm">Мы свяжемся с Вами в ближайшее время</div>
-    </div>
+    <form class="popup__form" id="form-content">
+      <H2>Запрос прайс листа</H2>
+      <p class="font-light">
+        Заполните форму и мы пришлем Вам актуальный прайс лист
+      </p>
+      <div class="col">
+        <input type="text" id="name" placeholder="Ваше имя" required />
+        <input type="email" id="email" placeholder="E-mail" required />
+        <input
+          type="text"
+          id="phone"
+          class="v-mask"
+          placeholder="Номер телефона"
+          required
+        />
+        <button type="submit">Получить прайс лист</button>
+        <div class="text-xs font-light">
+          Отправляя заявку я даю согласие на обработку персональных данных
+        </div>
+      </div>
+    </form>
     <div class="popup__success" id="form-success">
-      <H2>Заявка принята</H2>
-      <div class="text-sm">Спасибо что Вы с нами!</div>
+      <H2>Спасибо за Вашу заявку!</H2>
+      <p class="font-light">Наши специалисты уже отправляют Вам прайс лист!</p>
+      <Img src="offer-1-bg.png" only />
     </div>
   </div>
 </div>

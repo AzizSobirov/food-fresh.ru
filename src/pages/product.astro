@@ -17,11 +17,11 @@ import { TheAside, TheTop, TheOffers, TheClients, TheSklad } from "components";
               <span>/</span>
               <a href="/catalog">Каталог</a>
               <span>/</span>
-              <a href="#">Овощи и фрукты</a>
+              <a href="/catalog">Овощи и фрукты</a>
               <span>/</span>
-              <a href="#">Овощи </a>
+              <a href="/catalog/inside">Овощи </a>
               <span>/</span>
-              <a href="#" class="font-light">Картофель</a>
+              <a href="/product" class="font-light">Картофель</a>
             </div>
           </div>
         </div>
@@ -53,38 +53,40 @@ import { TheAside, TheTop, TheOffers, TheClients, TheSklad } from "components";
               </Col>
             </Row>
 
-            <table>
-              <thead>
-                <tr>
-                  <th>Наименование</th>
-                  <th>Упаковка</th>
-                  <th>Цена</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Картофель красный</td>
-                  <td>сетка 30-40кг</td>
-                  <td>
-                    <div class="btn">Запросить цену</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Молодой картофель</td>
-                  <td>сетка 30-40кг</td>
-                  <td>
-                    <div class="btn">Запросить цену</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Мытый картофель </td>
-                  <td>сетка 30-40кг</td>
-                  <td>
-                    <div class="btn">Запросить цену</div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="category__product-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Наименование</th>
+                    <th>Упаковка</th>
+                    <th>Цена</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Картофель красный</td>
+                    <td>сетка 30-40кг</td>
+                    <td>
+                      <div class="btn" onclick="openPopup()">Запросить цену</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Молодой картофель</td>
+                    <td>сетка 30-40кг</td>
+                    <td>
+                      <div class="btn" onclick="openPopup()">Запросить цену</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Мытый картофель </td>
+                    <td>сетка 30-40кг</td>
+                    <td>
+                      <div class="btn" onclick="openPopup()">Запросить цену</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div class="category__leaders">

@@ -9,6 +9,32 @@ function toggleCategories() {
   categories.classList.toggle("active");
 }
 
+function toggleContacts() {
+  const socials = document.querySelector('.mobile__tabs .socials')
+  const btns = socials.querySelectorAll('a')
+  const btnsReversed = [...btns].reverse()
+
+  if (socials.classList.contains('active')) {
+    socials.classList.remove('active')
+    btns.forEach((el, idx) => {
+      el.style.opacity = 0
+      el.style.transitionDelay = `0.${idx}s`
+      setTimeout(() => {
+        el.style.display = 'none'
+      }, 350);
+    })
+  } else {
+    socials.classList.add('active')
+    btnsReversed.forEach((el, idx) => {
+      el.style.display = 'flex'
+      setTimeout(() => {
+        el.style.opacity = 1
+        el.style.transitionDelay = `0.${idx}s`
+      }, 10);
+    })
+  }
+}
+
 // TODO: Buy from Moscow
 let buy = document.querySelector(".buy");
 if (buy) {
@@ -30,7 +56,6 @@ if (buy) {
     }
   });
 }
-
 
 // TODO: Popup
 [].forEach.call(document.querySelectorAll(".v-mask"), function (input) {

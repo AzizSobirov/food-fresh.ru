@@ -238,8 +238,9 @@
   }
 
   &-tab {
-    @include flex-col(center, center, 4px);
+    position: relative;
     cursor: pointer;
+    @include flex-col(center, center, 4px);
     --icon-size: 32px;
 
     &:last-child {
@@ -262,6 +263,24 @@
     transform: translate(-50%, calc(-50vh + 50%));
     width: 480px;
     z-index: 2;
+  }
+
+  .socials {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+    @include flex-col(center, center, 10px);
+
+    a {
+      width: 56px;
+      height: 56px;
+      @include center;
+      border-radius: 50%;
+      transition: var(--transition);
+      opacity: 0;
+      display: none;
+    }
   }
 
   @include media("xl") {
@@ -419,9 +438,6 @@
     }
   }
 }
-
-// .header-active {
-// }
 
 .header-sticky {
   transform: translateY(-60px);

@@ -4,6 +4,34 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("header-sticky", window.scrollY > 0);
 });
 
+function toggleCatalog() {
+  const btn = document.querySelector('.header__nav-btn')
+  const categories = document.querySelector(".header__nav .categories");
+  if (categories.classList.contains("active")) {
+    categories.classList.remove("active");
+    categories.style.animation = 'hideCatalog 0.3s ease-in-out'
+    setTimeout(() => {
+      categories.style.display = "none";
+    }, 300)
+  } else {
+    categories.classList.add("active");
+    categories.style.display = "flex";
+    categories.style.animation = 'showCatalog 0.3s ease-in-out'
+  }
+
+  document.addEventListener('click', event => {
+    const isClickInside = btn.contains(event.target)
+
+    if (!isClickInside) {
+      categories.classList.remove("active");
+      categories.style.animation = 'hideCatalog 0.3s ease-in-out'
+      setTimeout(() => {
+        categories.style.display = "none";
+      }, 300)
+    }
+  })
+}
+
 function toggleCategories() {
   const categories = document.querySelector(".mobile__categories");
   categories.classList.toggle("active");
@@ -104,13 +132,38 @@ if (buy) {
   input.addEventListener("keydown", mask, false);
 });
 
-const popup = document.querySelector(".popup");
-function openPopup() {
-  popup.style.display = 'flex'
+class Popup {
+  constructor(name, data) {
+    this.popup = document.querySelector(name);
+    this.body = document.querySelector("body");
+    this.data = data;
+  }
+  open() {
+    this.popup.style.display = "flex";
+    setTimeout(() => {
+      this.popup.style.opacity = "1";
+      this.popup.style.transform = "scale(1)";
+      this.body.classList.add("overflow-hidden");
+    }, 50);
+  }
+  close() {
+    this.popup.style.opacity = "0";
+    this.popup.style.transform = "scale(0.85)";
+    this.body.classList.remove("overflow-hidden");
+
+    setTimeout(() => {
+      this.popup.style.display = "none";
+    }, 500);
+  }
 }
-function closePopup() {
-  popup.style.display = 'none'
-}
+
+const openPopup = (name, data) => {
+  new Popup(`.popup--${name}`, data).open();
+};
+
+const closePopup = (name, data) => {
+  new Popup(`.popup--${name}`, data).close();
+};
 
 const popupForm = document.querySelector(".popup form");
 popupForm?.addEventListener("submit", (e) => {
@@ -129,7 +182,7 @@ popupForm?.addEventListener("submit", (e) => {
     success.style.display = "flex";
 
     setTimeout(() => {
-      closePopup();
+      closePopup('form');
       content.style.display = "flex";
       success.style.display = "none";
     }, 3000);

@@ -11,27 +11,29 @@ import { TheTop, TheSpecial, TheClients, TheSklad } from "components";
       <TheTop title="Прайс-лист на продукты питания" />
 
       <div class="pricing__content">
-        <p class="text-xl font-light">
-          Для снабжения ресторанов, столовых, кафе, баров и других предприятий
-          питания
-          <span class="text-primary font-bold">
-            предлагаем поставки полного ассортимента
-          </span>
-          качественных продовольственных и сопутствующих товаров.
-          <br /><br />
-          <span class="text-primary font-bold">Минимальные цены</span>, удобная
-          доставка и неизменно высокое качество товаров - залог успеха Вашего
-          бизнеса!
-          <br /><br />
-          Цены на продукцию постоянно меняются! <br />
-          <span class="text-primary font-bold">
-            Вы можете ознакомиться с актуальными на сегодняшний день ценами в
-            нашем прайс-листе.
-          </span>
-        </p>
-        <button class="btn" onclick="openPopup()"
-          >Запросить прайс лист</button
-        >
+        <div class="pricing__text">
+          <p class="text-xl font-light">
+            Для снабжения ресторанов, столовых, кафе, баров и других предприятий
+            питания
+            <span class="text-primary font-bold">
+              предлагаем поставки полного ассортимента
+            </span>
+            качественных продовольственных и сопутствующих товаров.
+            <br /><br />
+            <span class="text-primary font-bold">Минимальные цены</span>,
+            удобная доставка и неизменно высокое качество товаров - залог успеха
+            Вашего бизнеса!
+            <br /><br />
+            Цены на продукцию постоянно меняются! <br />
+            <span class="text-primary font-bold">
+              Вы можете ознакомиться с актуальными на сегодняшний день ценами в
+              нашем прайс-листе.
+            </span>
+          </p>
+          <button class="btn" onclick="openPopup('form')">Запросить прайс лист</button
+          >
+        </div>
+        <Img src="price-list-img.png" only />
       </div>
     </Section>
     <!-- TheSpecial -->

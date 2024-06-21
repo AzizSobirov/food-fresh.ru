@@ -29,7 +29,6 @@ const { list } = Astro.props;
                 class:list={child.children && "menu-item-has-children"}
               >
                 <a href={child.href}>{child.name}</a>
-
                 {child.children && (
                   <ul class="sub-menu">
                     {child.children.map((subchild) => (

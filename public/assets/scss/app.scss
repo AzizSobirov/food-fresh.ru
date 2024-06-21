@@ -21,3 +21,24 @@
 @import "starter-kit/index";
 @import "components/index";
 @import "index";
+
+@keyframes showCatalog {
+  0% {
+    opacity: 0;
+    transform: rotateX(-25deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+@keyframes hideCatalog {
+  0% {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateX(-25deg);
+  }
+}

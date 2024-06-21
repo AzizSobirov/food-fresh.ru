@@ -2,8 +2,8 @@
 import { H2, Img } from "starter-kit";
 ---
 
-<div class="popup">
-  <div class="popup__close" onclick="closePopup()">
+<div class="popup popup--form">
+  <div class="popup__close" onclick="closePopup('form')">
     <svg
       width="25"
       height="25"
@@ -43,5 +43,26 @@ import { H2, Img } from "starter-kit";
       <p class="font-light">Наши специалисты уже отправляют Вам прайс лист!</p>
       <Img src="offer-1-bg.png" only />
     </div>
+  </div>
+</div>
+
+<div class="popup popup--map">
+  <div class="popup__close" onclick="closePopup('map')">
+    <svg
+      width="25"
+      height="25"
+      viewBox="0 0 25 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M1 1L23.5 23.5" stroke="currentColor" stroke-width="2"></path>
+      <path d="M23.5 1L1 23.5" stroke="currentColor" stroke-width="2"></path>
+    </svg>
+  </div>
+
+  <div class="popup__content">
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?lang=ru_RU&scroll=true&source=constructor-api&um=constructor%3Afe19273bb416c127185b88171dc3845fa278048ca162c0b48a344d1f95f223d5"
+    ></iframe>
   </div>
 </div>

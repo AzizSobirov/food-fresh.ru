@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/assets/css/swiper.min.css" />
     <title>Категория 1</title>
 
-    <link rel="stylesheet" href="/assets/css/app.DY_9LFFY.css" />
+    <link rel="stylesheet" href="/assets/css/app.B9qEglA0.css" />
   </head>
   <body>
     <!-- Header -->
@@ -133,7 +133,7 @@
           /></a>
 
           <div class="header__nav-btn">
-            <div class="row">
+            <div class="row" onclick="toggleCatalog()">
               <svg
                 width="20"
                 height="12"
@@ -154,8 +154,16 @@
                   <a href="/catalog">Овощи и фрукты</a>
 
                   <ul class="sub-menu">
-                    <li class="menu-item">
+                    <li class="menu-item menu-item-has-children">
                       <a href="/catalog-2">Овощи</a>
+                      <ul class="sub-menu">
+                        <li class="menu-item">
+                          <a href="/catalog-2">Овощи 2</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="/catalog-2">Фрукты 2</a>
+                        </li>
+                      </ul>
                     </li>
                     <li class="menu-item">
                       <a href="/catalog-2">Фрукты</a>
@@ -581,8 +589,16 @@
                     <a href="/catalog">Овощи и фрукты</a>
 
                     <ul class="sub-menu">
-                      <li class="menu-item">
+                      <li class="menu-item menu-item-has-children">
                         <a href="/catalog-2">Овощи</a>
+                        <ul class="sub-menu">
+                          <li class="menu-item">
+                            <a href="/catalog-2">Овощи 2</a>
+                          </li>
+                          <li class="menu-item">
+                            <a href="/catalog-2">Фрукты 2</a>
+                          </li>
+                        </ul>
                       </li>
                       <li class="menu-item">
                         <a href="/catalog-2">Фрукты</a>
@@ -687,7 +703,7 @@
                         <td>Картофель красный</td>
                         <td>сетка 30-40кг</td>
                         <td>
-                          <div class="btn" onclick="openPopup()">
+                          <div class="btn" onclick="openPopup('form')">
                             Запросить цену
                           </div>
                         </td>
@@ -696,7 +712,7 @@
                         <td>Молодой картофель</td>
                         <td>сетка 30-40кг</td>
                         <td>
-                          <div class="btn" onclick="openPopup()">
+                          <div class="btn" onclick="openPopup('form')">
                             Запросить цену
                           </div>
                         </td>
@@ -705,7 +721,7 @@
                         <td>Мытый картофель</td>
                         <td>сетка 30-40кг</td>
                         <td>
-                          <div class="btn" onclick="openPopup()">
+                          <div class="btn" onclick="openPopup('form')">
                             Запросить цену
                           </div>
                         </td>
@@ -806,7 +822,7 @@
             <div class="col">
               <div class="text-h2">Получите наш оптовый прайс лист</div>
               <p class="font-light">Пришлем его Вам на почту за 10 минут</p>
-              <button class="btn" onclick="openPopup()">
+              <button class="btn" onclick="openPopup('form')">
                 Запросить прайс лист
               </button>
             </div>
@@ -1015,12 +1031,12 @@
                 Россия, Москва, Бережковская <br />
                 набережная, 12А
               </p>
-              <a class="btn" href="#">
+              <div class="btn" onclick="openPopup('map')">
                 <div class="icon">
                   <img src="/assets/img/icons/location.svg" alt="" />
                 </div>
                 <div class="font-light">Показать на карте</div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1033,8 +1049,8 @@
       </div>
     </footer>
     <!-- Popup -->
-    <div class="popup">
-      <div class="popup__close" onclick="closePopup()">
+    <div class="popup popup--form">
+      <div class="popup__close" onclick="closePopup('form')">
         <svg
           width="25"
           height="25"
@@ -1087,8 +1103,37 @@
       </div>
     </div>
 
+    <div class="popup popup--map">
+      <div class="popup__close" onclick="closePopup('map')">
+        <svg
+          width="25"
+          height="25"
+          viewBox="0 0 25 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 1L23.5 23.5"
+            stroke="currentColor"
+            stroke-width="2"
+          ></path>
+          <path
+            d="M23.5 1L1 23.5"
+            stroke="currentColor"
+            stroke-width="2"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="popup__content">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?lang=ru_RU&scroll=true&source=constructor-api&um=constructor%3Afe19273bb416c127185b88171dc3845fa278048ca162c0b48a344d1f95f223d5"
+        ></iframe>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="/assets/js/swiper.min.js"></script>
-    <script src="/assets/js/app.js?v=1718619744298"></script>
+    <script src="/assets/js/app.js?v=1718953556715"></script>
   </body>
 </html>

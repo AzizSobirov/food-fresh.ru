@@ -38,6 +38,7 @@
     & > .menu-item {
       position: relative;
       width: 100%;
+      cursor: pointer;
 
       & > a {
         position: relative;
@@ -88,14 +89,16 @@
         background: url("/assets/img/icons/egg.svg") center/contain no-repeat;
       }
 
-      &:hover .sub-menu {
+      &:hover > .sub-menu {
         display: flex;
+        transform-origin: top;
+        animation: showCatalog 0.3s ease-in-out;
       }
     }
 
-    & > .menu-item > .sub-menu {
+    & > .menu-item .sub-menu {
       position: absolute;
-      padding: 25px;
+      padding: 25px 0;
       top: 0;
       left: calc(100% + 50px);
       min-width: 165px;
@@ -109,13 +112,34 @@
         content: "";
         top: 0;
         left: 0;
-        transform: translateX(-100%);
+        transform: translate(-100%, 0);
         height: 100%;
-        width: 50px;
+        width: 75px;
+        cursor: pointer;
+      }
+
+      .menu-item {
+        padding: 0 25px;
+
+        .sub-menu {
+          left: calc(100% + 10px);
+
+          &::before {
+            width: 50px;
+          }
+        }
+      }
+
+      .menu-item:hover {
+        .sub-menu {
+          display: flex;
+          transform-origin: top;
+          animation: showCatalog 0.3s ease-in-out;
+        }
       }
     }
 
-    & > .menu-item > .sub-menu > .menu-item {
+    & > .menu-item .sub-menu > .menu-item {
       width: 100%;
 
       & > a {

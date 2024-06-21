@@ -73,10 +73,6 @@
     &-btn {
       position: relative;
 
-      &:hover .categories {
-        display: flex;
-      }
-
       .row {
         padding: 0 25px;
         height: 42px;
@@ -95,14 +91,8 @@
       .categories {
         position: absolute;
         top: calc(100% + 20px);
+        transform-origin: top;
         display: none;
-
-        @include before {
-          top: -20px;
-          left: 0;
-          width: 100%;
-          height: 20px;
-        }
       }
     }
 
@@ -476,3 +466,4 @@
     }
   }
 }
+
